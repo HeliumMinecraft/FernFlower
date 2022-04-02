@@ -11,7 +11,13 @@ sourceSets {
   test.java.srcDirs 'test'
 }
 
-repositories { mavenCentral() }
+repositories { 
+mavenCentral() 
+maven {
+url 'http://vitraclient.ml/maven2/'
+allowInsecureProtocol true
+}
+}
 dependencies {
   implementation 'org.jetbrains:annotations:20.1.0'
   testImplementation 'junit:junit:4.12'
